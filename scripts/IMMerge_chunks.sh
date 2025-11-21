@@ -5,7 +5,6 @@ source /../miniconda3/etc/profile.d/conda.sh
 conda activate IMMerge
 
 target_chunk_num=$SLURM_ARRAY_TASK_ID
-#target_chunk_num=$2
 
 DIR=/../vcfs/IMMerge/chunks
 mkdir -p $DIR
