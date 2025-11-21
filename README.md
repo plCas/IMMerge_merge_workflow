@@ -4,6 +4,9 @@
 
 
 # Process
+
+![alt text](IMMerge_workflow.tif)
+
   1. Remain only genotypes to reduce file size and generate .info.gz file by IMMerge. [bcftools_remain_gt_Info.sh](scripts/bcftools_remain_gt_Info.sh) <br>
   2. Calculate chunks for each chromosome (default: 3,000,000 variants/chunk; can adjust the number of variants according to the memory usage). [chunk_vcf_by_counts.py](scripts/chunk_vcf_by_counts.py) <br>
   3. Split vcf file and .info.gz according to pre-calculated chunks (generate from step 2). [bcftools_chunk_infos.sh](scripts/bcftools_chunk_infos.sh) <br>
