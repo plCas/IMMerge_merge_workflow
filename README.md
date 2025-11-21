@@ -12,6 +12,6 @@
   3. Create a list of vcf files that remain only genotypes.
   4. Calculate chunks for each chromosome (default: 3,000,000 variants/chunk; can adjust the number of variants according to the memory usage). [chunk_vcf_by_counts.py](scripts/chunk_vcf_by_counts.py) <br>
   5. Split vcf file and .info.gz according to pre-calculated chunks (generate from step 2). [bcftools_chunk_infos.sh](scripts/bcftools_chunk_infos.sh) [split_info_by_region.py](scripts/split_info_by_region.py) <br>
-     # note: split_info_by_region.py was used in bcftools_chunk_infos.sh.
+     \# note: split_info_by_region.py was used in bcftools_chunk_infos.sh.
   6. Merge all batches for each chunk. [IMMerge_chunks.sh](scripts/IMMerge_chunks.sh) <br>
   7. Concat all chunks together for each chromosome. [bcftools_concat.sh](scripts/bcftools_concat.sh) <br>
